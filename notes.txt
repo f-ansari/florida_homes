@@ -1,0 +1,13 @@
+Installation for front-end:
+npx create-react-app client (ran command was giving me an error. Did not install the rest)
+npm install axios 
+npm install --save react-router-dom
+
+
+[Completed backend Installation]
+Installation for back-end:
+npm init -y
+npm install express
+npm install mongoose
+npm install --save-dev nodemon 
+npm install cors, body-parser, morgan
