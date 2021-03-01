@@ -37,7 +37,7 @@ To get started, click [click here](https://trello.com/b/vNG8rF7Z/floridahomes) a
 
 ### ***Screenshots***
 
-![Flowchart](/Images/flowchart.png)
+![Flowchart](/Images/planning.png)
 
 ***
 
