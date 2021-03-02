@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./routes')
+const routes = require('./routes/index')
 const db = require('./db')
 const bodyParser = require('body-parser')
 const loggger = require('morgan')
