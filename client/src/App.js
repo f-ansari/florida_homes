@@ -1,11 +1,25 @@
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import { Route, Switch } from 'react-router-dom'
+import Nav from './components/Nav'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header" />
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+
+        <main>
+          <Switch>
+            <Route />
+            <Route />
+            <Route />
+            <Route />
+          </Switch>
+        </main>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
