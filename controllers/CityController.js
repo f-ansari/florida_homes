@@ -12,7 +12,7 @@ const getAllCities = async (req, res) => {
 const getCityById = async (req, res) => {
   try {
     const { id } = req.params
-    const city = await City.findById(id)
+    const city = await City.findById(id).populate('properties')
     if (city) {
       return res.status(200).json({ city })
     }

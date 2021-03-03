@@ -11,19 +11,25 @@ const main = async () => {
       name: 'Orlando',
       cardinalDirection: 'Centeral',
       taxRate: '6.5',
-      properties: properties._id
+      properties: [
+        properties[Math.floor(Math.random() * properties.length)]._id
+      ]
     },
     {
       name: 'Miami',
       cardinalDirection: 'South East',
       taxRate: '7.0',
-      properties: properties._id
+      properties: [
+        properties[Math.floor(Math.random() * properties.length)]._id
+      ]
     },
     {
       name: 'Destin',
       cardinalDirection: 'North West',
       taxRate: '6.5',
-      properties: properties._id
+      properties: [
+        properties[Math.floor(Math.random() * properties.length)]._id
+      ]
     }
   ]
 

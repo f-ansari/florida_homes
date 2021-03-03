@@ -27,6 +27,7 @@ export default class CityDetails extends Component {
   }
 
   render() {
+    console.log(this.state.cityDetails)
     const { name, cardinalDirection, taxRate } = this.state.cityDetails
     return (
       <div>
