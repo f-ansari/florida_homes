@@ -16,14 +16,12 @@ export default class ListingDetails extends Component {
   }
 
   getPropertyDetails = async () => {
-    console.log(this.state.propertyId, 'id')
     try {
       console.log('above res')
       const res = await axios.get(
-        `${BASE_URL}/api/properties/details/${this.state.propertyId}`
+        `${BASE_URL}/properties/details/${this.state.propertyId}`
       )
       this.setState({ propertyDetails: res.data.property })
-      console.log(res, 'res-axios')
     } catch (error) {
       throw error
     }

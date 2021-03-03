@@ -17,9 +17,8 @@ export default class ViewAllListing extends Component {
 
   getAllProperties = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/api/properties/all`)
+      const res = await axios.get(`${BASE_URL}/properties/all`)
       this.setState({ allProperties: res.data.properties })
-      // console.log(res.data.properties)
     } catch (error) {
       throw error
     }
@@ -41,7 +40,7 @@ export default class ViewAllListing extends Component {
               street={property.street}
               price={property.price}
               onClick={() =>
-                this.props.history.push(`/details/${property._id}`)
+                this.props.history.push(`/view/listing/details/${property._id}`)
               }
             />
           ))}

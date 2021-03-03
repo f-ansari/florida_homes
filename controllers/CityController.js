@@ -9,6 +9,19 @@ const getAllCities = async (req, res) => {
   }
 }
 
+const getCityById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const city = await City.findById(id)
+    if (city) {
+      return res.status(200).json({ city })
+    }
+    return res.status(404).send('City with specific ID does nto exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const postCity = async (req, res) => {
   try {
     const city = await new City(req.body)
@@ -36,6 +49,7 @@ const deleteCity = async (req, res) => {
 
 module.exports = {
   getAllCities,
+  getCityById,
   postCity,
   deleteCity
 }

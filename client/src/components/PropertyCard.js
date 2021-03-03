@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 
 export default class PropertyCard extends Component {
   render() {
-    // console.log(this.props)
     const { image, street, price, onClick } = this.props
-
+    console.log(this.props)
     return (
       <div onClick={onClick} className="card">
         <div className="img-wrapper">
