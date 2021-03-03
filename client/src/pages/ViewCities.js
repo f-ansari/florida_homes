@@ -41,7 +41,9 @@ export default class ViewCities extends Component {
           {this.state.allCities.map((city, index) => (
             <CityCard
               name={city.name}
-              onClick={() => this.props.history.push(`/detials/${city._id}`)}
+              onClick={() =>
+                this.props.history.push(`/view/city/details/${city._id}`)
+              }
             />
           ))}
         </section>

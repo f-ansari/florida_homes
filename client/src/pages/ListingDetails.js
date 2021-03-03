@@ -17,7 +17,6 @@ export default class ListingDetails extends Component {
 
   getPropertyDetails = async () => {
     try {
-      console.log('above res')
       const res = await axios.get(
         `${BASE_URL}/properties/details/${this.state.propertyId}`
       )
@@ -28,6 +27,7 @@ export default class ListingDetails extends Component {
   }
 
   render() {
+    console.log(this.props)
     const {
       image,
       price,
