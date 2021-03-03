@@ -27,7 +27,6 @@ export default class ListingDetails extends Component {
   }
 
   render() {
-    console.log(this.props)
     const {
       image,
       price,

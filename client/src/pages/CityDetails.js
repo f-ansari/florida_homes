@@ -20,19 +20,23 @@ export default class CityDetails extends Component {
       const res = await axios.get(
         `${BASE_URL}/cities/details/${this.state.cityId}`
       )
-
       this.setState({ cityDetails: res.data.city })
-      console.log(res.data.city)
     } catch (error) {
       throw error
     }
   }
 
   render() {
-    console.log(this.state.cityId)
+    const { name, cardinalDirection, taxRate } = this.state.cityDetails
     return (
       <div>
         <h1>City details</h1>
+        <h2>{name}</h2>
+
+        <div className="card">
+          <h4>Cardinal Direction: {cardinalDirection}</h4>
+          <h4>Tax Rate: {taxRate}%</h4>
+        </div>
       </div>
     )
   }
