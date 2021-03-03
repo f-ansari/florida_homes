@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import ViewCities from './pages/ViewCities'
 import PostListing from './pages/PostListing'
 import ViewAllListing from './pages/ViewAllListing'
+import ListingDetails from './pages/ListingDetails'
 
 export default class App extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class App extends Component {
             <Route path="/view/cities/" component={ViewCities} />
             <Route path="/post/listing" component={PostListing} />
             <Route path="/view/all/listing" component={ViewAllListing} />
+            <Route path="/details/:propertyId" component={ListingDetails} />
           </Switch>
         </main>
       </div>

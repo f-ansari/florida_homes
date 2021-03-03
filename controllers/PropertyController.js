@@ -9,10 +9,23 @@ const getAllProperties = async (req, res) => {
   }
 }
 
+const getPropertyById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const property = await Property.findById(id)
+    if (property) {
+      return res.status(200).json({ property })
+    }
+    return res.status(404).send('Property with specific ID does not exist')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 const getPropertiesByCity = async (req, res) => {
   try {
     console.log(req.params, 'req.params')
-    const {city} = req.params
+    const { city } = req.params
     const list = await Property.find({ city: { $eq: city } })
     return res.status(200).json({ list })
   } catch (error) {
@@ -47,6 +60,7 @@ const deleteProperty = async (req, res) => {
 
 module.exports = {
   getAllProperties,
+  getPropertyById,
   postProperty,
   deleteProperty,
   getPropertiesByCity
