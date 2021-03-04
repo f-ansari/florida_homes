@@ -9,7 +9,7 @@ export default class CityDetails extends Component {
     this.state = {
       cityId: props.match.params.cityId,
       cityDetails: {},
-      propertyByCity: {}
+      propertyByCity: []
     }
   }
 
@@ -31,13 +31,12 @@ export default class CityDetails extends Component {
   }
 
   getPropertiesByCity = async () => {
-    console.log(this.state.cityDetails.name)
     try {
       const res = await axios.get(
         `${BASE_URL}/properties/sort/${this.state.cityDetails.name}`
       )
       this.setState({ propertyByCity: res.data.list })
-      // console.log(this.state.propertyByCity)
+      console.log(this.state.propertyByCity)
     } catch (error) {
       throw error
     }
@@ -45,6 +44,7 @@ export default class CityDetails extends Component {
 
   render() {
     const { name, cardinalDirection, taxRate } = this.state.cityDetails
+    const { bed } = this.state.propertyByCity
     return (
       <div>
         <h1>City details</h1>
@@ -54,6 +54,20 @@ export default class CityDetails extends Component {
           <h4>Cardinal Direction: {cardinalDirection}</h4>
           <h4>Tax Rate: {taxRate}%</h4>
         </div>
+
+        <section className="container-grid">
+          {this.state.propertyByCity.map((property, index) => (
+            <PropertyCard
+              image={property.image}
+              street={property.street}
+              price={property.price}
+              id={property._id}
+              onClick={() =>
+                this.props.history.push(`/view/listing/details/${property._id}`)
+              }
+            />
+          ))}
+        </section>
       </div>
     )
   }
