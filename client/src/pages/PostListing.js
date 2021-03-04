@@ -15,7 +15,9 @@ export default class PostListing extends Component {
       zipCode: '',
       bed: '',
       bath: '',
-      sqft: ''
+      sqft: '',
+      description: '',
+      mlsNum: ''
     }
   }
 
@@ -46,7 +48,9 @@ export default class PostListing extends Component {
       zipCode,
       bed,
       bath,
-      sqft
+      sqft,
+      description,
+      mlsNum
     } = this.state
     return (
       <div>
@@ -133,6 +137,24 @@ export default class PostListing extends Component {
             value={sqft}
             onChange={this.handleChange}
             name="sqft"
+          />
+          <br></br>
+          <p>Description:</p>
+          <input
+            type="text"
+            placeholder="ex: This is a lovely home!"
+            value={description}
+            onChange={this.handleChange}
+            name="description"
+          />
+          <br></br>
+          <p>MLS Number:</p>
+          <input
+            type="text"
+            placeholder="ex: 0000000"
+            value={mlsNum}
+            onChange={this.handleChange}
+            name="mlsNum"
           />
           <br></br>
           <button type="submit">List Property!</button>
