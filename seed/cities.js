@@ -11,9 +11,9 @@ const main = async () => {
       name: 'Orlando',
       cardinalDirection: 'Centeral',
       taxRate: '6.5',
-      //   population: { type: String, required: true },
-      // areaCode: { type: String, required: true },
-      // elevation: { type: String, required: true },
+      population: '280,832 (2019)',
+      areaCode: '407',
+      elevation: "82'",
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]
@@ -22,6 +22,9 @@ const main = async () => {
       name: 'Miami',
       cardinalDirection: 'South East',
       taxRate: '7.0',
+      population: '454,279 (2019)',
+      areaCode: '786',
+      elevation: 'n/a',
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]
@@ -30,6 +33,9 @@ const main = async () => {
       name: 'Destin',
       cardinalDirection: 'North West',
       taxRate: '6.5',
+      population: '13,702 (2019)',
+      areaCode: '850',
+      elevation: "26'",
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]
