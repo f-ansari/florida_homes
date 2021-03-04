@@ -19,20 +19,6 @@ export default class PostListing extends Component {
     }
   }
 
-  publishListing = async () => {
-    const {
-      image,
-      price,
-      street,
-      city,
-      state,
-      zipCode,
-      bed,
-      bath,
-      sqft
-    } = this.state
-  }
-
   handleChange = ({ target }) => {
     this.setState({
       [target.name]: target.value
@@ -41,7 +27,6 @@ export default class PostListing extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault()
-    // this.setState({})
     try {
       const res = await axios.post(`${BASE_URL}/properties/add`, this.state)
       console.log(res)
