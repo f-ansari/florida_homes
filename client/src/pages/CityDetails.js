@@ -43,8 +43,14 @@ export default class CityDetails extends Component {
   }
 
   render() {
-    const { name, cardinalDirection, taxRate } = this.state.cityDetails
-    const { bed } = this.state.propertyByCity
+    const {
+      name,
+      cardinalDirection,
+      taxRate,
+      population,
+      areaCode,
+      elevation
+    } = this.state.cityDetails
     return (
       <div>
         <h1>City details</h1>
@@ -53,6 +59,9 @@ export default class CityDetails extends Component {
         <div className="card">
           <h4>Cardinal Direction: {cardinalDirection}</h4>
           <h4>Tax Rate: {taxRate}%</h4>
+          <h4>Population: {population}</h4>
+          <h4>Area Code: {areaCode}</h4>
+          <h4>Elevation: {elevation}</h4>
         </div>
 
         <section className="container-grid">

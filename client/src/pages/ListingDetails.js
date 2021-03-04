@@ -36,7 +36,9 @@ export default class ListingDetails extends Component {
       zipCode,
       bed,
       bath,
-      sqft
+      sqft,
+      description,
+      mlsNum
     } = this.state.propertyDetails
     return (
       <div>
@@ -64,6 +66,9 @@ export default class ListingDetails extends Component {
             <h4>Bed: {bed}</h4>
             <h4>Bath: {bath}</h4>
             <h4>Sqft: {sqft}</h4>
+            <h4>Description:</h4>
+            <h5>{description}</h5>
+            <h4>MLS #: {mlsNum}</h4>
           </div>
         </section>
       </div>
