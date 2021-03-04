@@ -10,7 +10,9 @@ const Property = new Schema(
     zipCode: { type: String, required: true },
     bed: { type: String, required: true },
     bath: { type: String, required: true },
-    sqft: { type: String, required: true }
+    sqft: { type: String, required: true },
+    description: { type: String, required: true },
+    mlsNum: { type: String, required: true }
   },
   { timestamps: true }
 )

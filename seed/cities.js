@@ -11,6 +11,9 @@ const main = async () => {
       name: 'Orlando',
       cardinalDirection: 'Centeral',
       taxRate: '6.5',
+      //   population: { type: String, required: true },
+      // areaCode: { type: String, required: true },
+      // elevation: { type: String, required: true },
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]

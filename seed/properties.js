@@ -16,6 +16,8 @@ const main = async () => {
       bed: '6',
       bath: '9',
       sqft: '9,764'
+      // description: { type: String, required: true },
+      // mlsNum: { type: String, required: true }
     },
     {
       image:
