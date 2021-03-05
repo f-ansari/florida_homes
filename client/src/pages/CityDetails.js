@@ -53,10 +53,12 @@ export default class CityDetails extends Component {
     } = this.state.cityDetails
     return (
       <div>
-        <h1>City details</h1>
-        <h2>{name}</h2>
-
-        <div className="card">
+        <div className="title">
+          <h1>City details</h1>
+          <h2>{name}</h2>
+        </div>
+        <div className="card city-stats">
+          <h2>City Stats</h2>
           <h4>Cardinal Direction: {cardinalDirection}</h4>
           <h4>Tax Rate: {taxRate}%</h4>
           <h4>Population: {population}</h4>

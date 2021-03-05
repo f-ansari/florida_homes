@@ -58,6 +58,11 @@ header nav a {
   padding: 1em;
 }
 
+.city-stats {
+  margin-left: 4em;
+  padding-left: 1em;
+}
+
 .deleteBtn {
   background-color: #f4511e;
   border: none;

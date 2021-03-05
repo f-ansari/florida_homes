@@ -584,6 +584,11 @@ const main = async () => {
     {
       id: '6041b033b087ba48c247fa36',
       name: 'Destin',
+      cardinalDirection: 'North West',
+      taxRate: '6.5',
+      population: '13,702 (2019)',
+      areaCode: '850',
+      elevation: '26',
       createdAt: '2021-03-05T04:14:43.432Z',
       updatedAt: '2021-03-05T04:14:43.432Z',
       properties: [
@@ -676,6 +681,11 @@ const main = async () => {
     {
       id: '6041b033b087ba48c247fa3a',
       name: 'Orlando',
+      cardinalDirection: 'Centeral',
+      taxRate: '6.5',
+      population: '280,832 (2019)',
+      areaCode: '407',
+      elevation: '82',
       createdAt: '2021-03-05T04:14:43.432Z',
       updatedAt: '2021-03-05T04:14:43.432Z',
       properties: [
@@ -804,6 +814,15 @@ const main = async () => {
         '6041b033b087ba48c247fc58',
         '6041b033b087ba48c247fc59'
       ]
+    },
+    {
+      id: '6041b033b087ba48c247fa3a',
+      name: 'Miami',
+      cardinalDirection: 'South East',
+      taxRate: '7.0',
+      population: '454,279 (2019)',
+      areaCode: '786',
+      elevation: 'n/a'
     }
   ]
 
