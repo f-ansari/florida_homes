@@ -44,7 +44,9 @@ export default class PropertyCard extends Component {
                 <p>Listed On: {created}</p>
               </div>
             </div>
-            <button onClick={this.deletePost}>Delete</button>
+            <button className="deleteBtn" onClick={this.deletePost}>
+              Delete
+            </button>
           </div>
         ) : null}
       </section>
