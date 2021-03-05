@@ -100,7 +100,7 @@ export default class PostCity extends Component {
             name="elevation"
           />
           <br></br>
-          <button type="submit">List Property!</button>
+          <button type="submit">Post City!</button>
         </form>
       </div>
     )
