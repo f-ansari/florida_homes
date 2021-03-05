@@ -32,14 +32,7 @@ export default class PostCity extends Component {
   }
 
   render() {
-    const {
-      name,
-      cardinalDirection,
-      taxRate,
-      population,
-      areaCode,
-      elevation
-    } = this.props
+    const { name } = this.props
     return (
       <div>
         <h1>Post a City:</h1>
@@ -53,51 +46,6 @@ export default class PostCity extends Component {
             value={name}
             onChange={this.handleChange}
             name="name"
-          />
-          <br></br>
-          <p>Cardinal Direction:</p>
-          <input
-            type="text"
-            placeholder="ex: SE or South East"
-            value={cardinalDirection}
-            onChange={this.handleChange}
-            name="cardinalDirection"
-          />
-          <br></br>
-          <p>Tax rate:</p>
-          <input
-            type="text"
-            placeholder="ex: 6.5"
-            value={taxRate}
-            onChange={this.handleChange}
-            name="taxRate"
-          />
-          <br></br>
-          <p>Population:</p>
-          <input
-            type="text"
-            placeholder="ex: 12,000"
-            value={population}
-            onChange={this.handleChange}
-            name="population"
-          />
-          <br></br>
-          <p>Area Code:</p>
-          <input
-            type="text"
-            placeholder="ex: 321"
-            value={areaCode}
-            onChange={this.handleChange}
-            name="areaCode"
-          />
-          <br></br>
-          <p>Elevation:</p>
-          <input
-            type="text"
-            placeholder="ex: 81"
-            value={elevation}
-            onChange={this.handleChange}
-            name="elevation"
           />
           <br></br>
           <button type="submit">Post City!</button>

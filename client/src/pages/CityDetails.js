@@ -42,26 +42,11 @@ export default class CityDetails extends Component {
   }
 
   render() {
-    const {
-      name,
-      cardinalDirection,
-      taxRate,
-      population,
-      areaCode,
-      elevation
-    } = this.state.cityDetails
+    const { name } = this.state.cityDetails
     return (
       <div>
         <h1>City details</h1>
         <h2>{name}</h2>
-
-        <div className="card">
-          <h4>Cardinal Direction: {cardinalDirection}</h4>
-          <h4>Tax Rate: {taxRate}%</h4>
-          <h4>Population: {population}</h4>
-          <h4>Area Code: {areaCode}</h4>
-          <h4>Elevation: {elevation}'</h4>
-        </div>
 
         <section className="container-grid">
           {this.state.propertyByCity.map((property, index) => (
@@ -69,6 +54,7 @@ export default class CityDetails extends Component {
               image={property.image}
               street={property.street}
               price={property.price}
+              createdAt={property.createdAt}
               id={property._id}
               onClick={() =>
                 this.props.history.push(`/view/listing/details/${property._id}`)
