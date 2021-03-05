@@ -55,3 +55,5 @@ TBD
 ### ***Credits***
 
 * [Zillow](https://www.zillow.com/)
+* [Glassmorphism](https://glassmorphism.com/)
+* [w3schools.com](https://www.w3schools.com/default.asp)

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import '../style/Form.css'
 
 export default class PostListing extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ export default class PostListing extends Component {
       mlsNum
     } = this.state
     return (
-      <div>
+      <div className="form">
         <h1>Post Listing</h1>
         <p>Fill out the form to List a property live.</p>
 
@@ -64,6 +65,7 @@ export default class PostListing extends Component {
             value={image}
             onChange={this.handleChange}
             name="image"
+            className="input-feild"
           />
           <br></br>
           <p>Price:</p>
@@ -73,6 +75,7 @@ export default class PostListing extends Component {
             value={price}
             onChange={this.handleChange}
             name="price"
+            className="input-feild"
           />
           <br></br>
           <p>Street:</p>
@@ -82,6 +85,7 @@ export default class PostListing extends Component {
             value={street}
             onChange={this.handleChange}
             name="street"
+            className="input-feild"
           />
           <br></br>
           <p>City:</p>
@@ -91,6 +95,7 @@ export default class PostListing extends Component {
             value={city}
             onChange={this.handleChange}
             name="city"
+            className="input-feild"
           />
           <br></br>
           <p>State:</p>
@@ -100,6 +105,7 @@ export default class PostListing extends Component {
             value={state}
             onChange={this.handleChange}
             name="state"
+            className="input-feild"
           />
           <br></br>
           <p>Zip-Code:</p>
@@ -109,6 +115,7 @@ export default class PostListing extends Component {
             value={zipCode}
             onChange={this.handleChange}
             name="zipCode"
+            className="input-feild"
           />
           <br></br>
           <p>Bed:</p>
@@ -118,6 +125,7 @@ export default class PostListing extends Component {
             value={bed}
             onChange={this.handleChange}
             name="bed"
+            className="input-feild"
           />
           <br></br>
           <p>Bath:</p>
@@ -127,6 +135,7 @@ export default class PostListing extends Component {
             value={bath}
             onChange={this.handleChange}
             name="bath"
+            className="input-feild"
           />
           <br></br>
           <p>Sqft:</p>
@@ -136,6 +145,7 @@ export default class PostListing extends Component {
             value={sqft}
             onChange={this.handleChange}
             name="sqft"
+            className="input-feild"
           />
           <br></br>
           <p>Description:</p>
@@ -145,6 +155,7 @@ export default class PostListing extends Component {
             value={description}
             onChange={this.handleChange}
             name="description"
+            className="input-feild"
           />
           <br></br>
           <p>MLS Number:</p>
@@ -154,9 +165,12 @@ export default class PostListing extends Component {
             value={mlsNum}
             onChange={this.handleChange}
             name="mlsNum"
+            className="input-feild"
           />
           <br></br>
-          <button type="submit">List Property!</button>
+          <button className="post" type="submit">
+            List Property!
+          </button>
         </form>
       </div>
     )
