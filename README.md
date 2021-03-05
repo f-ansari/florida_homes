@@ -12,7 +12,7 @@ Web link TBD
 
 #### ***Description***
 
-FloridaHomes is a website where user can listing their Florida homes to show for sale. Once the listing has sold, the user can find and delete their listing. Listing are orginized by cities .  
+FloridaHomes is a website where user can listing their Florida homes to show for sale. Once the listing is sold, the user can find and delete their listing. The cities tab allows users to view city stats and properties within the city.
 
 #### Functionality of the site: 
   * Get records of City stats and listing
