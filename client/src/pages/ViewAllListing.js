@@ -28,7 +28,9 @@ export default class ViewAllListing extends Component {
     const allListing = this.state.allProperties.reverse()
     return (
       <div>
-        <h1>View All Listing</h1>
+        <div className="title">
+          <h1>View All Listing</h1>
+        </div>
 
         <section className="container-grid">
           {this.state.allProperties.map((property, index) => (

@@ -1,0 +1,14 @@
+.app-home {
+  margin-top: 3em;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 3em;
+
+  padding: 500px;
+
+  background: rgba(67, 78, 89, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(41, 40, 40, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+}

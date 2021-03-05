@@ -25,9 +25,12 @@ export default class ViewCities extends Component {
   }
 
   render() {
+    const all = this.state.allCities.sort()
     return (
       <div>
-        <h1>View Cities</h1>
+        <div className="title">
+          <h1>View Cities</h1>
+        </div>
 
         <section className="container-grid">
           {this.state.allCities.map((city, index) => (
