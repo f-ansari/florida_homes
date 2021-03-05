@@ -24,7 +24,12 @@ export default class PropertyCard extends Component {
   }
 
   render() {
-    const { image, street, price, onClick } = this.props
+    const { image, street, price, onClick, createdAt } = this.props
+
+    const timestamp = createdAt
+    const date = new Date(timestamp)
+    const created = date.toDateString()
+
     return (
       <section>
         {!this.state.deleteListing ? (
@@ -36,6 +41,7 @@ export default class PropertyCard extends Component {
               <div className="info-wrapper flex-col">
                 <h3>{street}</h3>
                 <p>${price}</p>
+                <p>Listed On: {created}</p>
               </div>
             </div>
             <button onClick={this.deletePost}>Delete</button>

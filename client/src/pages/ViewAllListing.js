@@ -36,6 +36,7 @@ export default class ViewAllListing extends Component {
               image={property.image}
               street={property.street}
               price={property.price}
+              createdAt={property.createdAt}
               id={property._id}
               onClick={() =>
                 this.props.history.push(`/view/listing/details/${property._id}`)
