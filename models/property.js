@@ -8,11 +8,7 @@ const Property = new Schema(
     city: { type: String, required: true },
     state: { type: String, required: true },
     zipCode: { type: String, required: true },
-    bed: { type: String, required: true },
-    bath: { type: String, required: true },
-    sqft: { type: String, required: true },
-    description: { type: String, required: true },
-    mlsNum: { type: String, required: true }
+    mlsNum: { type: Number, required: true }
   },
   { timestamps: true }
 )
