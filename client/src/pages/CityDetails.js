@@ -36,7 +36,6 @@ export default class CityDetails extends Component {
         `${BASE_URL}/properties/sort/${this.state.cityDetails.name}`
       )
       this.setState({ propertyByCity: res.data.list })
-      console.log(this.state.propertyByCity)
     } catch (error) {
       throw error
     }
@@ -61,7 +60,7 @@ export default class CityDetails extends Component {
           <h4>Tax Rate: {taxRate}%</h4>
           <h4>Population: {population}</h4>
           <h4>Area Code: {areaCode}</h4>
-          <h4>Elevation: {elevation}</h4>
+          <h4>Elevation: {elevation}'</h4>
         </div>
 
         <section className="container-grid">

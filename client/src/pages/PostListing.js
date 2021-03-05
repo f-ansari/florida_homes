@@ -31,7 +31,6 @@ export default class PostListing extends Component {
     e.preventDefault()
     try {
       const res = await axios.post(`${BASE_URL}/properties/add`, this.state)
-      console.log(res)
       this.props.history.push(`/view/all/listing`)
     } catch (error) {
       throw error

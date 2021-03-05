@@ -13,7 +13,7 @@ const main = async () => {
       taxRate: '6.5',
       population: '280,832 (2019)',
       areaCode: '407',
-      elevation: "82'",
+      elevation: '82',
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]
@@ -35,7 +35,7 @@ const main = async () => {
       taxRate: '6.5',
       population: '13,702 (2019)',
       areaCode: '850',
-      elevation: "26'",
+      elevation: '26',
       properties: [
         properties[Math.floor(Math.random() * properties.length)]._id
       ]

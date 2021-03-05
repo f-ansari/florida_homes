@@ -28,10 +28,6 @@ export default class ViewAllListing extends Component {
     return (
       <div>
         <h1>View All Listing</h1>
-        <p>
-          map out all listing <br />
-          click on lising take you to detials of listing
-        </p>
 
         <section className="container-grid">
           {this.state.allProperties.map((property, index) => (

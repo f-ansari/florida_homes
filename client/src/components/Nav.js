@@ -8,8 +8,9 @@ export default class Nav extends Component {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/view/cities/">Cities</NavLink>
-          <NavLink to="/post/listing">Post Listing</NavLink>
           <NavLink to="/view/all/listing">View All Listings</NavLink>
+          <NavLink to="/post/city">Post City</NavLink>
+          <NavLink to="/post/listing">Post Listing</NavLink>
         </nav>
       </header>
     )

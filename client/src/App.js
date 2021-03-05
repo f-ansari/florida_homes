@@ -8,6 +8,7 @@ import PostListing from './pages/PostListing'
 import ViewAllListing from './pages/ViewAllListing'
 import ListingDetails from './pages/ListingDetails'
 import CityDetails from './pages/CityDetails'
+import PostCity from './pages/PostCity'
 
 export default class App extends Component {
   render() {
@@ -18,7 +19,8 @@ export default class App extends Component {
         <main>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/view/cities/" component={ViewCities} />
+            <Route path="/view/cities" component={ViewCities} />
+            <Route path="/post/city" component={PostCity} />
             <Route path="/post/listing" component={PostListing} />
             <Route path="/view/all/listing" component={ViewAllListing} />
             <Route
