@@ -9,4 +9,6 @@ Router.post('/add', CityController.postCity)
 
 Router.delete('/delete/:id', CityController.deleteCity)
 
+Router.put('/update', CityController.updateCity)
+
 module.exports = Router

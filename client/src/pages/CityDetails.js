@@ -36,26 +36,40 @@ export default class CityDetails extends Component {
         `${BASE_URL}/properties/sort/${this.state.cityDetails.name}`
       )
       this.setState({ propertyByCity: res.data.list })
+      console.log(this.state.propertyByCity)
     } catch (error) {
       throw error
     }
   }
 
   render() {
-    const { name } = this.state.cityDetails
+    const {
+      name,
+      cardinalDirection,
+      taxRate,
+      population,
+      areaCode,
+      elevation
+    } = this.state.cityDetails
     return (
       <div>
-        <div className="title">
-          <h1>City details</h1>
-          <h2>{name}</h2>
+        <h1>City details</h1>
+        <h2>{name}</h2>
+
+        <div className="card">
+          <h4>Cardinal Direction: {cardinalDirection}</h4>
+          <h4>Tax Rate: {taxRate}%</h4>
+          <h4>Population: {population}</h4>
+          <h4>Area Code: {areaCode}</h4>
+          <h4>Elevation: {elevation}'</h4>
         </div>
+
         <section className="container-grid">
           {this.state.propertyByCity.map((property, index) => (
             <PropertyCard
               image={property.image}
               street={property.street}
               price={property.price}
-              createdAt={property.createdAt}
               id={property._id}
               onClick={() =>
                 this.props.history.push(`/view/listing/details/${property._id}`)

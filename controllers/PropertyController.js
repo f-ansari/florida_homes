@@ -24,7 +24,6 @@ const getPropertyById = async (req, res) => {
 
 const getPropertiesByCity = async (req, res) => {
   try {
-    console.log(req.params, 'req.params')
     const { city } = req.params
     const list = await Property.find({ city: { $eq: city } })
     return res.status(200).json({ list })

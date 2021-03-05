@@ -35,21 +35,19 @@ To get started, click [click here](https://trello.com/b/vNG8rF7Z/floridahomes) a
 
 ***
 
-### ***Screenshots***
+### ***ProductScreenshots***
 
-![Flowchart](/Images/planning.png)
-
-***
-
-Final Product 
-
-TBD
+![Home Page](/Images/home_page.png)
+![View All Listing](/Images/view_all.png)
+![Post Listing](/Images/post_listing.png)
 
 ***
 
 ### ***Future Updates***
 
-- [ ] Make a functioning site
+- [ ] Make sure dupilicate cites are not made
+- [ ] Create a search bar
+- [ ] Login for Agents 
 
 
 ### ***Credits***
