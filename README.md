@@ -35,7 +35,7 @@ To get started, click [click here](https://trello.com/b/vNG8rF7Z/floridahomes) a
 
 ***
 
-### ***ProductScreenshots***
+### ***Product Screenshots***
 
 ![Home Page](/Images/home_page.png)
 ![View All Listing](/Images/view_all.png)
