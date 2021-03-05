@@ -58,37 +58,6 @@ header nav a {
   padding: 1em;
 }
 
-.image-container {
-  width: 95vw;
-  margin: auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1em 0;
-}
-
-.image-container div {
-  margin: auto;
-  width: 90%;
-}
-
-.image-container img {
-  margin: auto;
-  text-align: center;
-  width: 100%;
-}
-
-.details {
-  width: 80%;
-  margin: auto;
-}
-
-.flex-row {
-  display: flex;
-}
-
-.space {
-  justify-content: space-between;
-}
-
 .deleteBtn {
   background-color: #f4511e;
   border: none;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import '../style/ListingDetails.css'
 
 export default class ListingDetails extends Component {
   constructor(props) {
@@ -41,8 +42,10 @@ export default class ListingDetails extends Component {
       mlsNum
     } = this.state.propertyDetails
     return (
-      <div>
-        <h1>Listing Details</h1>
+      <div className="lisingD-app">
+        <div className="lisingD-title">
+          <h1>Listing Details</h1>
+        </div>
         <section image-container className="image-container">
           <div>
             <img src={image} alt="poster" />

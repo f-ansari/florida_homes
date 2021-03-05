@@ -12,7 +12,7 @@ const Property = new Schema(
     bath: { type: String, required: true },
     sqft: { type: String, required: true },
     description: { type: String, required: true },
-    mlsNum: { type: Number, required: true }
+    mlsNum: { type: String, required: true }
   },
   { timestamps: true }
 )
