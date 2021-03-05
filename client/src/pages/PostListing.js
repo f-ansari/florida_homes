@@ -13,6 +13,10 @@ export default class PostListing extends Component {
       city: '',
       state: '',
       zipCode: '',
+      bed: '',
+      bath: '',
+      sqft: '',
+      description: '',
       mlsNum: ''
     }
   }
@@ -34,7 +38,19 @@ export default class PostListing extends Component {
   }
 
   render() {
-    const { image, price, street, city, state, zipCode, mlsNum } = this.state
+    const {
+      image,
+      price,
+      street,
+      city,
+      state,
+      zipCode,
+      bed,
+      bath,
+      sqft,
+      description,
+      mlsNum
+    } = this.state
     return (
       <div>
         <h1>Post Listing</h1>
@@ -93,6 +109,42 @@ export default class PostListing extends Component {
             value={zipCode}
             onChange={this.handleChange}
             name="zipCode"
+          />
+          <br></br>
+          <p>Bed:</p>
+          <input
+            type="text"
+            placeholder="ex: 4"
+            value={bed}
+            onChange={this.handleChange}
+            name="bed"
+          />
+          <br></br>
+          <p>Bath:</p>
+          <input
+            type="text"
+            placeholder="ex: 3.5"
+            value={bath}
+            onChange={this.handleChange}
+            name="bath"
+          />
+          <br></br>
+          <p>Sqft:</p>
+          <input
+            type="text"
+            placeholder="ex: 3,465"
+            value={sqft}
+            onChange={this.handleChange}
+            name="sqft"
+          />
+          <br></br>
+          <p>Description:</p>
+          <input
+            type="text"
+            placeholder="ex: This is a lovely home!"
+            value={description}
+            onChange={this.handleChange}
+            name="description"
           />
           <br></br>
           <p>MLS Number:</p>
