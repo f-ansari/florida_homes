@@ -34,10 +34,6 @@ export default class ListingDetails extends Component {
       city,
       state,
       zipCode,
-      bed,
-      bath,
-      sqft,
-      description,
       mlsNum
     } = this.state.propertyDetails
     return (
@@ -52,7 +48,7 @@ export default class ListingDetails extends Component {
         <section className="details">
           <div className="flex-row space"></div>
           <div>
-            <h1>${price}</h1>
+            <h1>{price}</h1>
           </div>
 
           <div>
@@ -63,11 +59,6 @@ export default class ListingDetails extends Component {
           </div>
 
           <div>
-            <h4>Bed: {bed}</h4>
-            <h4>Bath: {bath}</h4>
-            <h4>Sqft: {sqft}</h4>
-            <h4>Description:</h4>
-            <h5>{description}</h5>
             <h4>MLS #: {mlsNum}</h4>
           </div>
         </section>
