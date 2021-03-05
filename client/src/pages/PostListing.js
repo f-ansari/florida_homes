@@ -7,7 +7,6 @@ export default class PostListing extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      submitted: false,
       image: '',
       price: '',
       street: '',
@@ -18,7 +17,7 @@ export default class PostListing extends Component {
       bath: '',
       sqft: '',
       description: '',
-      mlsNum: ''
+      mlsNum: null
     }
   }
 

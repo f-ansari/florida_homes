@@ -5,8 +5,8 @@ export default class Home extends Component {
   render() {
     return (
       <div className="app-home">
-        <div className="title">
-          <h1>Home</h1>
+        <div className="title-home">
+          <h1>FloridaHome🍊</h1>
         </div>
 
         <div className="welcome">
@@ -32,10 +32,10 @@ export default class Home extends Component {
           <h2>WARNING</h2>
           <p>
             This website was built as a project for class. <br />
-            The creator will not monitor this website. If there is unusual
-            activity, <br />
-            please be kind to delete the undesired listing. Please use this site
-            appropriately. <br />
+            The creator will try to monitor this website to best of <br />
+            their ability. If there is unusual activity such as fraud, <br />
+            please be kind to delete the undesired listing. Please <br />
+            use this site appropriately. <br />
           </p>
         </div>
 

@@ -45,9 +45,10 @@ export default class CityDetails extends Component {
     const { name } = this.state.cityDetails
     return (
       <div>
-        <h1>City details</h1>
-        <h2>{name}</h2>
-
+        <div className="title">
+          <h1>City details</h1>
+          <h2>{name}</h2>
+        </div>
         <section className="container-grid">
           {this.state.propertyByCity.map((property, index) => (
             <PropertyCard

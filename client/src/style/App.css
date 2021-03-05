@@ -12,7 +12,8 @@ header nav a {
 }
 
 .title {
-  margin-left: 7em;
+  margin-left: 3em;
+  font-size: 150%;
 }
 
 .container-grid {
