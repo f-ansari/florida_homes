@@ -34,7 +34,9 @@ export default class CityCard extends Component {
                 <h3>{name}</h3>
               </div>
             </div>
-            <button onClick={this.deleteCityPost}>Delete</button>
+            <button className="deleteBtn" onClick={this.deleteCityPost}>
+              Delete
+            </button>
           </div>
         ) : null}
       </section>

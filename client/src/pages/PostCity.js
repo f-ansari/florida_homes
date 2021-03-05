@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import '../style/Form.css'
 
 export default class PostCity extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ export default class PostCity extends Component {
   render() {
     const { name } = this.props
     return (
-      <div>
+      <div className="form">
         <h1>Post a City:</h1>
         <p>Fill out form to list City!</p>
 
@@ -46,9 +47,12 @@ export default class PostCity extends Component {
             value={name}
             onChange={this.handleChange}
             name="name"
+            className="input-feild"
           />
           <br></br>
-          <button type="submit">Post City!</button>
+          <button className="post" type="submit">
+            Post City!
+          </button>
         </form>
       </div>
     )
