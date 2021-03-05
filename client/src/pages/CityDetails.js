@@ -43,6 +43,7 @@ export default class CityDetails extends Component {
   }
 
   render() {
+    const allListing = this.state.propertyByCity.reverse()
     const {
       name,
       cardinalDirection,
@@ -72,6 +73,7 @@ export default class CityDetails extends Component {
               image={property.image}
               street={property.street}
               price={property.price}
+              createdAt={property.createdAt}
               id={property._id}
               onClick={() =>
                 this.props.history.push(`/view/listing/details/${property._id}`)

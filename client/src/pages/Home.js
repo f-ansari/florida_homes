@@ -29,10 +29,10 @@ export default class Home extends Component {
         </div>
 
         <div className="warning">
-          <h2>WARNING</h2>
+          <h2>⚠️ATTENTION⚠️</h2>
           <p>
-            This website was built as a project for class. <br />
-            The creator will try to monitor this website to best of <br />
+            This website was built as a project for a class. <br />
+            The creator will try to monitor this website to the best of <br />
             their ability. If there is unusual activity such as fraud, <br />
             please be kind to delete the undesired listing. Please <br />
             use this site appropriately. <br />
