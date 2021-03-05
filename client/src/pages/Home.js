@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <div className="app-home">
         <div className="title-home">
-          <h1>FloridaHome🍊</h1>
+          <h1>FloridaHomes🍊</h1>
         </div>
 
         <div className="welcome">
@@ -29,7 +29,7 @@ export default class Home extends Component {
         </div>
 
         <div className="warning">
-          <h2>⚠️ATTENTION⚠️</h2>
+          <h2>⚠️ ATTENTION ⚠️</h2>
           <p>
             This website was built as a project for a class. <br />
             The creator will try to monitor this website to the best of <br />
