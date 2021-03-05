@@ -40,7 +40,7 @@ export default class PropertyCard extends Component {
               </div>
               <div className="info-wrapper flex-col">
                 <h3>{street}</h3>
-                <p>${price}</p>
+                <p>{price}</p>
                 <p>Listed On: {created}</p>
               </div>
             </div>
