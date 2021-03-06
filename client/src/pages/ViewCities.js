@@ -25,7 +25,6 @@ export default class ViewCities extends Component {
   }
 
   render() {
-    const all = this.state.allCities.sort()
     return (
       <div>
         <div className="title">

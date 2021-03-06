@@ -25,7 +25,7 @@ export default class ViewAllListing extends Component {
   }
 
   render() {
-    const allListing = this.state.allProperties.reverse()
+    const allProperties = this.state.allProperties.reverse()
     return (
       <div>
         <div className="title">
@@ -33,7 +33,7 @@ export default class ViewAllListing extends Component {
         </div>
 
         <section className="container-grid">
-          {this.state.allProperties.map((property, index) => (
+          {allProperties.map((property, index) => (
             <PropertyCard
               image={property.image}
               street={property.street}
