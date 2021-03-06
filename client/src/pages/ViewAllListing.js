@@ -26,7 +26,6 @@ export default class ViewAllListing extends Component {
 
   render() {
     const allProperties = this.state.allProperties.reverse()
-    console.log(allProperties)
     return (
       <div>
         <div className="title">

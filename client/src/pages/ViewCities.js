@@ -25,7 +25,6 @@ export default class ViewCities extends Component {
   }
 
   render() {
-    console.log(this.state.allCities)
     return (
       <div>
         <div className="title">
