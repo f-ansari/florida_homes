@@ -25,6 +25,7 @@ export default class ViewCities extends Component {
   }
 
   render() {
+    console.log(this.state.allCities)
     return (
       <div>
         <div className="title">
@@ -32,15 +33,16 @@ export default class ViewCities extends Component {
         </div>
 
         <section className="container-grid">
-          {this.state.allCities.map((city, index) => (
-            <CityCard
-              name={city.name}
-              id={city._id}
-              onClick={() =>
-                this.props.history.push(`/view/city/details/${city._id}`)
-              }
-            />
-          ))}
+          {this.state.allCities.length &&
+            this.state.allCities.map((city, index) => (
+              <CityCard
+                name={city.name}
+                id={city._id}
+                onClick={() =>
+                  this.props.history.push(`/view/city/details/${city._id}`)
+                }
+              />
+            ))}
         </section>
       </div>
     )
