@@ -2,19 +2,19 @@ const { Schema } = require('mongoose')
 
 const Property = new Schema(
   {
-    image: { type: String, required: true },
-    price: { type: String, required: true },
-    street: { type: String, required: true },
-    city: { type: String, required: true },
-    state: { type: String, required: true },
-    zipCode: { type: String, required: true },
-    bed: { type: String, required: true },
-    bath: { type: String, required: true },
-    sqft: { type: String, required: true },
-    description: { type: String, required: true },
-    mlsNum: { type: String, required: true }
+    image: { type: String, required: false },
+    price: { type: String, required: false },
+    street: { type: String, required: false },
+    city: { type: String, required: false },
+    state: { type: String, required: false },
+    zipCode: { type: String, required: false },
+    bed: { type: String, required: false },
+    bath: { type: String, required: false },
+    sqft: { type: String, required: false },
+    description: { type: String, required: false },
+    mlsNum: { type: String, required: false }
   },
-  { timestamps: true }
+  { timestamps: false }
 )
 
 module.exports = Property
