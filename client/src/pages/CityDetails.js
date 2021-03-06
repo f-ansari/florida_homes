@@ -24,7 +24,6 @@ export default class CityDetails extends Component {
       )
       this.setState({ cityDetails: res.data.city })
       this.getPropertiesByCity()
-      console.log(res.data.city)
     } catch (error) {
       throw error
     }
@@ -36,14 +35,13 @@ export default class CityDetails extends Component {
         `${BASE_URL}/properties/sort/${this.state.cityDetails.name}`
       )
       this.setState({ propertyByCity: res.data.list })
-      console.log(this.state.propertyByCity)
     } catch (error) {
       throw error
     }
   }
 
   render() {
-    const allListing = this.state.propertyByCity.reverse()
+    const propertyByCity = this.state.propertyByCity.reverse()
     const {
       name,
       cardinalDirection,
@@ -68,7 +66,7 @@ export default class CityDetails extends Component {
         </div>
 
         <section className="container-grid">
-          {allListing.map((property, index) => (
+          {propertyByCity.map((property, index) => (
             <PropertyCard
               image={property.image}
               street={property.street}
