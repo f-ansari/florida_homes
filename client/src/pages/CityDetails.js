@@ -68,7 +68,7 @@ export default class CityDetails extends Component {
         </div>
 
         <section className="container-grid">
-          {this.state.propertyByCity.map((property, index) => (
+          {allListing.map((property, index) => (
             <PropertyCard
               image={property.image}
               street={property.street}

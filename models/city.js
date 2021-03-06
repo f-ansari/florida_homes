@@ -10,7 +10,7 @@ const City = new Schema(
     elevation: { type: String, required: false },
     properties: [{ type: Schema.Types.ObjectId, ref: 'properties' }]
   },
-  { timestamps: false }
+  { timestamps: true }
 )
 
 module.exports = City

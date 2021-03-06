@@ -14,7 +14,7 @@ const Property = new Schema(
     description: { type: String, required: false },
     mlsNum: { type: String, required: false }
   },
-  { timestamps: false }
+  { timestamps: true }
 )
 
 module.exports = Property
