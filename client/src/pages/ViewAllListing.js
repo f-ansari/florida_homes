@@ -10,15 +10,16 @@ export default class ViewAllListing extends Component {
       allProperties: []
     }
   }
-
   componentDidMount() {
+    console.log('componentDidMount')
     this.getAllProperties()
   }
 
   getAllProperties = async () => {
     try {
       const res = await axios.get(`${BASE_URL}/properties/all`)
-      this.setState({ allProperties: res.data.properties })
+      console.log('get all properties', res)
+      await this.setState({ allProperties: res.data.properties })
     } catch (error) {
       throw error
     }
@@ -33,9 +34,10 @@ export default class ViewAllListing extends Component {
         </div>
 
         <section className="container-grid">
-          {allProperties.length &&
+          {allProperties.length ? (
             allProperties.map((property, index) => (
               <PropertyCard
+                key={`property${index}`}
                 image={property.image}
                 street={property.street}
                 price={property.price}
@@ -47,7 +49,10 @@ export default class ViewAllListing extends Component {
                   )
                 }
               />
-            ))}
+            ))
+          ) : (
+            <h3>LOADING...</h3>
+          )}
         </section>
       </div>
     )

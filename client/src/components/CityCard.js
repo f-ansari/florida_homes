@@ -13,9 +13,7 @@ export default class CityCard extends Component {
 
   deleteCityPost = async (e) => {
     try {
-      const res = await axios.delete(
-        `${BASE_URL}/cities/delete/${this.props.id}`
-      )
+      await axios.delete(`${BASE_URL}/cities/delete/${this.props.id}`)
       this.setState({ deleteCity: true })
     } catch (error) {
       throw error

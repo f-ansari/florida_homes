@@ -17,8 +17,8 @@ export default class ViewCities extends Component {
 
   getAllCities = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/cities/all`)
-      this.setState({ allCities: res.data.cities })
+      const res = axios.get(`${BASE_URL}/cities/all`)
+      await this.setState({ allCities: res.data.cities })
     } catch (error) {
       throw error
     }

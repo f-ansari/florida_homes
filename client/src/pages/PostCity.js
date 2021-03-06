@@ -25,7 +25,7 @@ export default class PostCity extends Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post(`${BASE_URL}/cities/add`, this.state)
+      await axios.post(`${BASE_URL}/cities/add`, this.state)
       this.props.history.push(`/view/cities`)
     } catch (error) {
       throw error
