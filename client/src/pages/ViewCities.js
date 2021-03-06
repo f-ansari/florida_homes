@@ -17,8 +17,9 @@ export default class ViewCities extends Component {
 
   getAllCities = async () => {
     try {
-      const res = axios.get(`${BASE_URL}/cities/all`)
-      await this.setState({ allCities: res.data.cities })
+      const res = await axios.get(`${BASE_URL}/cities/all`)
+
+      this.setState({ allCities: res.data.cities })
     } catch (error) {
       throw error
     }
@@ -32,16 +33,20 @@ export default class ViewCities extends Component {
         </div>
 
         <section className="container-grid">
-          {this.state.allCities.length &&
+          {this.state.allCities.length ? (
             this.state.allCities.map((city, index) => (
               <CityCard
+                key={city._id}
                 name={city.name}
                 id={city._id}
                 onClick={() =>
                   this.props.history.push(`/view/city/details/${city._id}`)
                 }
               />
-            ))}
+            ))
+          ) : (
+            <h3>LOADING...</h3>
+          )}
         </section>
       </div>
     )

@@ -11,15 +11,13 @@ export default class ViewAllListing extends Component {
     }
   }
   componentDidMount() {
-    console.log('componentDidMount')
     this.getAllProperties()
   }
 
   getAllProperties = async () => {
     try {
       const res = await axios.get(`${BASE_URL}/properties/all`)
-      console.log('get all properties', res)
-      await this.setState({ allProperties: res.data.properties })
+      this.setState({ allProperties: res.data.properties })
     } catch (error) {
       throw error
     }
@@ -37,7 +35,7 @@ export default class ViewAllListing extends Component {
           {allProperties.length ? (
             allProperties.map((property, index) => (
               <PropertyCard
-                key={`property${index}`}
+                key={property._id}
                 image={property.image}
                 street={property.street}
                 price={property.price}
