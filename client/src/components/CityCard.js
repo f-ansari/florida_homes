@@ -17,7 +17,6 @@ export default class CityCard extends Component {
         `${BASE_URL}/cities/delete/${this.props.id}`
       )
       this.setState({ deleteCity: true })
-      console.log(res, 'deleted city')
     } catch (error) {
       throw error
     }
