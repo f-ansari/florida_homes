@@ -44,7 +44,15 @@ export default class App extends Component {
                 />
               )}
             />
-            <Route path="/post/listing" component={PostListing} />
+            <Route
+              path="/post/listing"
+              component={(routerProps) => (
+                <PostListing
+                  {...routerProps}
+                  capitalizeString={this.capitalizeString}
+                />
+              )}
+            />
             <Route path="/view/all/listing" component={ViewAllListing} />
             <Route
               path="/view/listing/details/:propertyId"

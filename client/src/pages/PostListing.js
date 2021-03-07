@@ -6,6 +6,9 @@ import '../style/Form.css'
 export default class PostListing extends Component {
   constructor(props) {
     super(props)
+
+    this.capitalizeString = this.props.capitalizeString
+
     this.state = {
       image: '',
       price: '',
@@ -17,7 +20,7 @@ export default class PostListing extends Component {
       bath: '',
       sqft: '',
       description: '',
-      mlsNum: null
+      mlsNum: ''
     }
   }
 
@@ -27,7 +30,13 @@ export default class PostListing extends Component {
     })
   }
 
+  updatingState = () => {
+    this.setState({ street: this.capitalizeString(this.state.street) })
+    this.setState({ city: this.capitalizeString(this.state.city) })
+  }
+
   handleSubmit = async (e) => {
+    await this.updatingState()
     e.preventDefault()
     try {
       await axios.post(`${BASE_URL}/properties/add`, this.state)
