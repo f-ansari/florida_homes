@@ -15,15 +15,11 @@ export default class App extends Component {
     const cityName = string
     const capCity = cityName.split(' ')
 
-    console.log('before: ', cityName)
-    string = capCity
+    return (string = capCity
       .map((word) => {
         return word[0].toUpperCase() + word.substring(1).toLowerCase()
       })
-      .join(' ')
-
-    console.log('after: ', string)
-    return string
+      .join(' '))
   }
 
   render() {

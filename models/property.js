@@ -4,8 +4,8 @@ const Property = new Schema(
   {
     image: { type: String, required: false },
     price: { type: String, required: false },
-    street: { type: String, required: false },
-    city: { type: String, required: false },
+    street: { type: String, required: true },
+    city: { type: String, required: true },
     state: { type: String, required: false },
     zipCode: { type: String, required: false },
     bed: { type: String, required: false },
