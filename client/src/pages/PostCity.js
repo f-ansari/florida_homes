@@ -6,6 +6,9 @@ import '../style/Form.css'
 export default class PostCity extends Component {
   constructor(props) {
     super(props)
+
+    this.capitalizeString = this.props.capitalizeString
+
     this.state = {
       name: '',
       cardinalDirection: '',
@@ -23,7 +26,7 @@ export default class PostCity extends Component {
   }
 
   handleSubmit = async (e) => {
-    this.capitalizeName()
+    this.setState({ name: await this.capitalizeString(this.state.name) })
     e.preventDefault()
     try {
       await axios.post(`${BASE_URL}/cities/add`, this.state)
@@ -31,20 +34,6 @@ export default class PostCity extends Component {
     } catch (error) {
       throw error
     }
-  }
-
-  capitalizeName = () => {
-    const cityName = this.state.name
-    const capCity = cityName.split(' ')
-
-    const nameVal = capCity
-      .map((word) => {
-        return word[0].toUpperCase() + word.substring(1)
-      })
-      .join(' ')
-
-    console.log(nameVal)
-    this.setState({ name: nameVal })
   }
 
   render() {

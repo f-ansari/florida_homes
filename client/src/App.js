@@ -11,6 +11,21 @@ import CityDetails from './pages/CityDetails'
 import PostCity from './pages/PostCity'
 
 export default class App extends Component {
+  capitalizeString = (string) => {
+    const cityName = string
+    const capCity = cityName.split(' ')
+
+    console.log('before: ', cityName)
+    string = capCity
+      .map((word) => {
+        return word[0].toUpperCase() + word.substring(1).toLowerCase()
+      })
+      .join(' ')
+
+    console.log('after: ', string)
+    return string
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,7 +35,15 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/view/cities" component={ViewCities} />
-            <Route path="/post/city" component={PostCity} />
+            <Route
+              path="/post/city"
+              component={(routerProps) => (
+                <PostCity
+                  {...routerProps}
+                  capitalizeString={this.capitalizeString}
+                />
+              )}
+            />
             <Route path="/post/listing" component={PostListing} />
             <Route path="/view/all/listing" component={ViewAllListing} />
             <Route
