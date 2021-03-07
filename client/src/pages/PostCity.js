@@ -23,6 +23,7 @@ export default class PostCity extends Component {
   }
 
   handleSubmit = async (e) => {
+    this.capitalizeName()
     e.preventDefault()
     try {
       await axios.post(`${BASE_URL}/cities/add`, this.state)
@@ -32,8 +33,29 @@ export default class PostCity extends Component {
     }
   }
 
+  capitalizeName = () => {
+    const cityName = this.state.name
+    const capCity = cityName.split(' ')
+
+    const nameVal = capCity
+      .map((word) => {
+        return word[0].toUpperCase() + word.substring(1)
+      })
+      .join(' ')
+
+    console.log(nameVal)
+    this.setState({ name: nameVal })
+  }
+
   render() {
-    const { name } = this.props
+    const {
+      name,
+      cardinalDirection,
+      taxRate,
+      population,
+      areaCode,
+      elevation
+    } = this.props
     return (
       <div className="form">
         <h1>Post a City:</h1>
@@ -47,6 +69,56 @@ export default class PostCity extends Component {
             value={name}
             onChange={this.handleChange}
             name="name"
+            className="input-feild"
+          />
+          <br></br>
+          <p>Cardinal Direction:</p>
+          <input
+            type="text"
+            placeholder="ex: North East or NE"
+            value={cardinalDirection}
+            onChange={this.handleChange}
+            name="cardinalDirection"
+            className="input-feild"
+          />
+          <br></br>
+          <p>Tax Rate:</p>
+          <input
+            type="text"
+            placeholder="ex: 6.5"
+            value={taxRate}
+            onChange={this.handleChange}
+            name="taxRate"
+            className="input-feild"
+          />
+          <br></br>
+          <p>Population:</p>
+          <input
+            type="text"
+            placeholder="12,500"
+            value={population}
+            onChange={this.handleChange}
+            name="population"
+            className="input-feild"
+          />
+          <br></br>
+          <p>Area Code:</p>
+          <input
+            type="text"
+            placeholder="321"
+            value={areaCode}
+            onChange={this.handleChange}
+            name="areaCode"
+            className="input-feild"
+          />
+          <br></br>
+          <p>Elevation:</p>
+          <input
+            type="text"
+            placeholder="ex: 35"
+            value={elevation}
+            onChange={this.handleChange}
+            name="elevation"
             className="input-feild"
           />
           <br></br>

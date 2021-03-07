@@ -55,3 +55,4 @@ To get started, click [click here](https://trello.com/b/vNG8rF7Z/floridahomes) a
 * [Zillow](https://www.zillow.com/)
 * [Glassmorphism](https://glassmorphism.com/)
 * [w3schools.com](https://www.w3schools.com/default.asp)
+* [freeCodeCamp](https://www.freecodecamp.org/news/how-to-capitalize-words-in-javascript/)
