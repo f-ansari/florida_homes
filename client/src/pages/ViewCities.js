@@ -26,6 +26,7 @@ export default class ViewCities extends Component {
   }
 
   render() {
+    const allCities = this.state.allCities
     return (
       <div>
         <div className="title">
@@ -33,8 +34,8 @@ export default class ViewCities extends Component {
         </div>
 
         <section className="container-grid">
-          {this.state.allCities.length ? (
-            this.state.allCities.map((city, index) => (
+          {allCities.length ? (
+            allCities.map((city, index) => (
               <CityCard
                 key={city._id}
                 name={city.name}
